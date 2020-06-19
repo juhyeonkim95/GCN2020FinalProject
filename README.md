@@ -7,4 +7,7 @@ and code can be found in [here](https://github.com/TobiasSkovgaardJepsen/relatio
 Most of the code is from the original code.
 Custom added codes are in custom folder.
 See `Train.ipynb` for training, `Test.ipynb` for testing.
-Because of size limit, 
+Because of size limit, only test dataset is uploaded.
+
+You need to install osmnx, MXNet, dgl, PyTorch.
+MXNet and dgl should be gpu-version.
