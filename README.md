@@ -6,8 +6,9 @@ Paper can be found in [here](https://arxiv.org/abs/1908.11567)
 and code can be found in [here](https://github.com/TobiasSkovgaardJepsen/relational-fusion-networks) .
 Most of the code is from the original code.
 Custom added codes are in custom folder.
-Data is in `data.zip`. First unzip it.
-Example network parameter data is in `model_data` folder.
+Road network data for 12 Korean cities are in `data.zip`. 
+First unzip it.
+Pre-trained network parameter data is in `model_data` folder.
 See `Train.ipynb` for training, `Test.ipynb` for testing.
 
 You need to install osmnx, MXNet, dgl, PyTorch.
