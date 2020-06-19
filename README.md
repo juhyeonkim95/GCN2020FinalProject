@@ -14,12 +14,25 @@ See `Train.ipynb` for training, `Test.ipynb` for testing.
 You need to install osmnx, MXNet, dgl, PyTorch.
 MXNet and dgl should be gpu-version.
 
-## Example of Road Network
+## Explanation on dataset
+### Input Attributes
+For node attribute, in/out degree were used.
+For edge attribute, road category, length were used.
+For between-edge attribute, turning angle was used.
+### Target Data (Driving Speed Data)
+Original paper used historical speed data in single city and
+split them into train/test data.
+However, I could not obtain such date-by-date data.
+Instead, I used osmnx default provided driving speed data.
+However they gave speed values with limited types. 
+(e.g. only 7 different values in Suwon)
 ![suwon_speed_with_map](./assets/suwon_speed_with_map.png)
+
+If you can access more accurate speed data, 
+it is recommended to use it instead.
 
 ## Result
 MSE loss for test set cities are written down in below table.
-
 
 |             | Daegu    | Suwon    | Ulsan    | Yongin   | average  |
 |-------------|----------|----------|----------|----------|----------|
@@ -35,3 +48,6 @@ MSE loss for test set cities are written down in below table.
 RFN gave better result than baseline algorithms. 
 Especially RFN with intentional fusion and attentional aggregation 
 gave the best result.
+Although limited data was used, 
+it was possible to verify the effectiveness of RFN 
+over traditional graph convolution networks as the paper says.
